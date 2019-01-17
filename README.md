@@ -298,7 +298,7 @@ Join in:
 
 Join in:
 
-* Change `myfunction.m` so that the core functionality reads:
+* Create `stepfunction.m` so that the core functionality reads:
 ```
 if x > 0
   y = 1;
@@ -312,7 +312,8 @@ endif
 
 Try:
 
-* Plot `myfunction` from *x* = –5 to 5.
+* Plot `stepfunction` from *x* = –5 to 5.
+* Plot `stepfunction(x)*sin(x)` from *x* = –2π to 2π.
 
 Now try:
 
@@ -330,7 +331,13 @@ function squares_up_to(n)
   end
 end
 ```
-* This function has no output! It just does something and prints to the screen
+* Note: this function has no output! It just does something and prints to the screen
+
+Try:
+
+* Write a function `odd_cubes_up_to(n)`.
+
+Join in:
 
 * Create a new function `count_up_to.m`. Inside let's write
 ```
