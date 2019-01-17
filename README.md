@@ -48,7 +48,7 @@ Join in:
 
 Try:
 
-* Find sin<sup>(–1)</sup>(1)
+* Find sin<sup>–1</sup>(1)
 * Find the remainder when 14 is divided by 3
 * Find |–4|
 
@@ -225,8 +225,8 @@ Try:
 
 Join in:
 
-* `xlabel('x')
-* `ylabel('exp(x)')
+* `xlabel('x')`
+* `ylabel('exp(x)')`
 * `title('Exponential growth is fast')`
 * `xlim([0 5])`
 * Now let's try multiple plots
@@ -238,11 +238,19 @@ Join in:
 * `plot(x,y2,'k--')`
 * `legend('exp(x)','exp(2x)')`
 
-## Log plot
+Try:
+
+* The same but use `loglog`, `semilogx` or `semilogy` instead of `plot` (the syntax is the same). What do they do?
 
 ### Challenge for the end of the day
 
-Something that brings it all together
+* Create a 10×10 matrix of random numbers (hint: use `rand`) and call it `A`
+* Find the eigenvalues of *A*
+* Show that the sum of the eigenvalues of *A* = the trace of *A*
+* Plot the eigenvalues on an Argand diagram, using a circular marker at each eigenvalue
+* Now add a row and column of zeros to *A*, to form *B*, which is therefore an 11×11 matrix. (Think about how you might want to do this!)
+* Now plot the eigenvalues of *B* on the same graph as the eigenvalues of *A*, in another colour.
+* What can you say about the eigenvalues of *B* compared to the eigenvalues of *A*?
 
 ### Built-in functions to try
 
