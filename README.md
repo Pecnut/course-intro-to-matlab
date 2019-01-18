@@ -6,8 +6,8 @@ Introduction to Matlab course for the CM Hub at Imperial College
 
 ## Part 1. Call-and-response Matlab
 
-### 1. Where Matlab sits among other programming languages / mathematical software
-(Maths/popular graph)
+### 1. Where Matlab sits among other languages
+<img src="/readme-images/maths-not-maths-languages.png" width="50%">
 
 Pros of Matlab: 
 * Shallow learning curve for maths
@@ -308,32 +308,57 @@ Now we move from simple call-and-response to writing whole programs
   - 2*a* + 3*b* = 8
 * Plot the graphs of sin(*ax*), sin(*bx*) and sin(*cx*) for *x* from –π to π, with these plots in different colours. Include a legend, a title and a label for the *x*-axis.
 
-### 18. Writing and calling simple scripts and functions
+### 17a. Writing and calling simple functions
+
+* Difference between scripts and functions. 
+* Let's do functions first.
 
 Join in:
 
 * Create a new file `myfunction.m` and inside it write:
 ``` 
-function [y] = myfunction(x)
-  y = 3*x+1;
+function [y] = myfunction(n)
+  y = 3n+1;
 end;
 ```
 * Save and run `myfunction(5)` from the command line
+* Breakpoints
+* Fix the file: `y = 3*n+1;`
 
 Try:
 
-* Create a function `my_first_my_last_my_everything.m` which takes a vector `v` and returns the sum of the first element in the vector and the last element in the vector
+* Create a function `my_first_my_last_my_everything` which takes a vector `v` and returns the sum of the first element in the vector and the last element in the vector
+* Test it out in the command line, running `my_first_my_last_my_everything([1:10])`.
 
 Join in:
 
-* Change `my_first_my_last_my_everything.m` so it outputs the first and last elements separately
-* `[first, last] = my_first_my_last_my_everything(v)`
+* Change `my_first_my_last_my_everything` so it outputs the first and last elements separately
+* Test it out:
+  - `[first, last] = my_first_my_last_my_everything(v)`
+  - `first`
+  - `last`
 
-### 19. If
+### 17b. Writing simple scripts
 
 Join in:
 
-* Create `stepfunction.m` so that the core functionality reads:
+* Create a script `myscript.m`
+* Inside let's put lots of things:
+```
+matrix_size = 4;
+M = magic(matrix_size);
+vector = M(1,:);
+[first, last] = my_first_my_last_my_everything(vector);
+i = myfunction(first*last);
+disp(i)
+```
+* Run the script.
+
+### 18. If
+
+Join in:
+
+* Create a function `signfunction(x)` so that the core functionality reads:
 ```
 if x > 0
   y = 1;
@@ -347,30 +372,29 @@ endif
 
 Try:
 
-* Plot `stepfunction` from *x* = –5 to 5.
-* Plot `stepfunction(x)*sin(x)` from *x* = –2π to 2π.
+* Plot `signfunction(x)` from *x* = –5 to 5.
+* Plot `signfunction(x)*sin(x)` from *x* = –2π to 2π.
 
 Now try:
 
-* Change `myfunction.m` so that if *x* is even, it returns *x*/2, otherwise it returns 3*x*+1.
+* Change `myfunction(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
 
-### 20. For and while loops
+### 19. For and while loops
 
 Join in:
 
-* Create a new function `squares_up_to.m`. Inside let's write
+* Create a new script `squares_up_to.m`. Inside let's write
 ``` 
-function squares_up_to(n)
-  for i=1:n
-    disp(i^2); % this squares i and then displays it on the screen
-  end
+n = 10;
+for i=1:n
+  disp(i^2); % this squares i and then displays it on the screen
 end
 ```
-* Note: this function has no output! It just does something and prints to the screen
+* Run the script
 
 Try:
 
-* Write a function `odd_cubes_up_to(n)`.
+* Change the script to display the first 10 odd cubes.
 
 Join in:
 
@@ -388,15 +412,36 @@ end
 
 Try:
 
-* The Collatz conjecture: adapt `myfunction.m` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `myfunction.m`.
+* The Collatz conjecture: adapt `myfunction(n)` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `myfunction.m`.
 
-### 21. Saving and reading data (incl. comments)
+* Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
 
-* Save output of Collatz function to CSV file
-* Read in a CSV file
-* `min`, `max` and the locations
+### 20. Saving and reading data (incl. comments)
 
-### 22. Debugging
+There are lots of ways of saving and reading data in Matlab. A good question to ask is 'do I want to open the saved data in another program?'
+
+Join in:
+
+* Download the file `examples/exchange_rates.csv`
+* Move the CSV file to your folder
+* Have a look at this file in Excel
+* Create a new script, `exchange_rate_data.m`
+* `data = csvread('exchange_rates.csv',1,0);`
+
+Your turn:
+
+* Plot the GBP/USD price (12th column) against the day of the year (1st column)
+* On the same graph, plot the EUR/USD price (11th column) against the day of the year
+* On a new graph, plot the EUR/GBP price against the day of the year. Can you guess which year this data is from?
+* What was the minimum number of euros you could buy with £1 that year?
+* On which day of the year was this the case? (Hint: look up `min` in the help files)
+
+Join in:
+
+* Create another data matrix, `data_pounds`, which contains the exchange rate of these currencies versus GBP, instead of USD
+* Save the EUR/GBP data matrix
+* `csvwrite('exchange_rates_pounds.csv',data_pounds)`
+* Look at it in Excel
 
 ### End of day challenge
 
