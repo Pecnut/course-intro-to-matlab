@@ -1,20 +1,33 @@
-# course-intro-to-matlab
+# CM Hub: Introduction to Matlab
 Introduction to Matlab course for the CM Hub at Imperial College
 
-* Part 1: Call-and-response Matlab 
-* Part 2: Writing Matlab programs
+* **Part 1:** Call-and-response Matlab
+* **Part 2:** Writing Matlab programs
 
 ## Part 1. Call-and-response Matlab
 
-### Where Matlab sits among other programming languages / mathematical software
-* (Maths/popular graph)
-* What Matlab is good for
-* What Matlab is bad for
+### 1. Where Matlab sits among other programming languages / mathematical software
+(Maths/popular graph)
 
-### Awareness of the Matlab desktop environment
+Pros of Matlab: 
+* Shallow learning curve for maths
+* Comes with a lot of useful baked-in tools
+* Interactivity/debugging is quite easy
+* Backwards compatible and has been around for a long time
+
+Cons of Matlab:
+* Ideosyncratic
+* £££££££££££
+* Bad for programming in general
+* Isn't used outside of universities
+* Plays badly with other languages
+
+In short: Matlab is a good plug-and-play language for medium-sized maths problems.
+
+### 2. Awareness of the Matlab desktop environment
 * The command window allows for call-and-response interface
 
-### Command-line arithmetic 
+### 3. Command-line arithmetic 
 
 Join in:
 
@@ -27,7 +40,7 @@ Try:
 
 * Does Matlab respect BIDMAS?: `3+4*5`
 
-### Use of variables
+### 4. Use of variables
 
 Join in:
 
@@ -41,7 +54,7 @@ Join in:
 * `(y+1)^2`
 * `y=sin(x)*cos(x)`
 
-### Getting help
+### 5. Getting help
 
 * Find square root of x: Google the function
 * Or use F1 on the function
@@ -52,13 +65,13 @@ Try:
 * Find the remainder when 14 is divided by 3
 * Find |–4|
 
-### The semicolon
+### 6. The semicolon
 
 Try:
 
 * What's the difference between `x=40` and `x=40;` ?
 
-### Creating vectors and matrices
+### 7. Creating vectors and matrices
 
 Join in:
 
@@ -74,7 +87,7 @@ Try:
 * What do commas do?: `[29, 43, 13, 3.2, -26]`
 * How long is `[1:0.5:10]`?
 
-### Matrix manipulation
+### 8. Matrix manipulation
 
 Join in:
 
@@ -110,7 +123,7 @@ Now try:
 * Harder! Produce the elements of `A` for which both coordinates are odd
 * Replace the bottom row of `A` with zeros
 
-### Vector arithmetic
+### 9. Vector arithmetic
 
 Join in:
 
@@ -131,7 +144,7 @@ Try:
 * `sum` the squares from 1 to 5
 * What is the mean of the powers of 2 from the zeroth power to the sixth power? (Google the function to find the mean... or guess!)
 
-### Matrix arithmetic
+### 10. Matrix arithmetic
 
 Join in:
 
@@ -148,7 +161,7 @@ Try:
 * Make one of the elements of `B` imaginary (`i`)
 * Calculate `B'`. What does the apostrophe *actually* do?
 
-### Size
+### 11. Size
 
 Size gives rows × columns
 
@@ -159,7 +172,7 @@ Size gives rows × columns
 
 Vectors by default are row vectors in Matlab.
 
-### More matrix arithmetic
+### 12. More matrix arithmetic
 
 Join in:
 
@@ -173,7 +186,7 @@ Try:
 * Let `x = [3 1 4]` (without the apostrophe). Will calculating `A*x` work? Try it.
 * Create the 3×3 identity matrix `I = eye(3)`. Multiply *I* by *x*.
 
-### Inversion of matrices (and when this is a bad idea)
+### 13. Inversion of matrices (and when this is a bad idea)
 
 Join in:
 
@@ -189,7 +202,7 @@ Try:
 * Solve the system of equations *x*+*y*=2, 3*y*–*x*=3.
 * Let `A = [1 2 3; 4 5 6; 5 7 9]` and `b = [-1; 0; 1]`. Solve *Ax=b*. What is the determinant of *A*? (Google!)
 
-### Eigenvalues and eigenvectors
+### 14. Eigenvalues and eigenvectors
 
 * `A = [-2 -4 2; -2 1 2; 4 2 5]`
 * `eig(A)`
@@ -198,7 +211,7 @@ Try:
 
 * How to get eigenvectors? (Google or F1)
 
-### Plotting in 2D
+### 15. Plotting in 2D
 
 Join in:
 
@@ -242,6 +255,28 @@ Try:
 
 * The same but use `loglog`, `semilogx` or `semilogy` instead of `plot` (the syntax is the same). What do they do?
 
+### 16. Plotting in 3D
+
+Join in:
+
+* `t = [0:0.1:10];`
+* `x = sin(t);`
+* `y = cos(t);`
+* `z = t;`
+* `plot3(x,y,z)`
+* `grid on`
+
+Visualise *f*(*x,y*) = sin(*x*)cos(2*y*) for 0 ≤ *x,y* ≤ 2π:
+
+* Create grid 
+  - `x = linspace(0,2*pi,300)`
+  - `y = linspace(0,2*pi,300)`
+  - `[xg,yg] = meshgrid(x,y);`
+* `f = sin(xg).*cos(2*yg);`
+* `contour(xg,yg,f,20);`
+* `surf(x,y,f)`
+* `shading interp`
+
 ### Challenge for the end of the day
 
 * Create a 10×10 matrix of random numbers (hint: use `rand`) and call it `A`
@@ -273,7 +308,7 @@ Now we move from simple call-and-response to writing whole programs
   - 2*a* + 3*b* = 8
 * Plot the graphs of sin(*ax*), sin(*bx*) and sin(*cx*) for *x* from –π to π, with these plots in different colours. Include a legend, a title and a label for the *x*-axis.
 
-### Writing and calling simple scripts and functions
+### 18. Writing and calling simple scripts and functions
 
 Join in:
 
@@ -294,7 +329,7 @@ Join in:
 * Change `my_first_my_last_my_everything.m` so it outputs the first and last elements separately
 * `[first, last] = my_first_my_last_my_everything(v)`
 
-### If
+### 19. If
 
 Join in:
 
@@ -319,7 +354,7 @@ Now try:
 
 * Change `myfunction.m` so that if *x* is even, it returns *x*/2, otherwise it returns 3*x*+1.
 
-### For and while loops
+### 20. For and while loops
 
 Join in:
 
@@ -355,35 +390,13 @@ Try:
 
 * The Collatz conjecture: adapt `myfunction.m` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `myfunction.m`.
 
-### Saving and reading data (incl. comments)
+### 21. Saving and reading data (incl. comments)
 
 * Save output of Collatz function to CSV file
 * Read in a CSV file
 * `min`, `max` and the locations
 
-### Plotting in 3D
-
-Join in:
-
-* `t = [0:0.1:10];`
-* `x = sin(t);`
-* `y = cos(t);`
-* `z = t;`
-* `plot3(x,y,z)`
-* `grid on`
-
-Visualise *f*(*x,y*) = sin(*x*)cos(2*y*) for 0 ≤ *x,y* ≤ 2π:
-
-* Create grid 
-  - `x = linspace(0,2*pi,300)`
-  - `y = linspace(0,2*pi,300)`
-  - `[xg,yg] = meshgrid(x,y);`
-* `f = sin(xg).*cos(2*yg);`
-* `contour(xg,yg,f,20);`
-* `surf(x,y,f)`
-* `shading interp`
-
-### Debugging
+### 22. Debugging
 
 ### End of day challenge
 
