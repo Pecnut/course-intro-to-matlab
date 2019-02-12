@@ -9,7 +9,7 @@ Introduction to Matlab course for the CM Hub at Imperial College
 ### 1. Where Matlab sits among other languages
 <img src="/readme-images/maths-not-maths-languages.png" width="50%">
 
-Pros of Matlab: 
+Pros of Matlab:
 * Shallow learning curve for maths
 * Comes with a lot of useful baked-in tools
 * Interactivity/debugging is quite easy
@@ -27,7 +27,7 @@ In short: Matlab is a good plug-and-play language for medium-sized maths problem
 ### 2. Awareness of the Matlab desktop environment
 * The command window allows for call-and-response interface
 
-### 3. Command-line arithmetic 
+### 3. Command-line arithmetic
 
 Join in:
 
@@ -79,7 +79,7 @@ Join in:
 * `y = [1 2; 3 4]`
 * `[1:10]` (note endpoints)
 * `[1:2:10]`
-* `[3:-0.1:2]` 
+* `[3:-0.1:2]`
 
 Try:
 
@@ -197,21 +197,132 @@ Join in:
 * If *Ax* = *b* then *x* = *A*<sup>–1</sup>*b*, so `inv(A)*b`
 * `A\b`
 
-Try: 
+Try:
 
 * Solve the system of equations *x*+*y*=2, 3*y*–*x*=3.
 * Let `A = [1 2 3; 4 5 6; 5 7 9]` and `b = [-1; 0; 1]`. Solve *Ax=b*. What is the determinant of *A*? (Google!)
 
-### 14. Eigenvalues and eigenvectors
 
-* `A = [-2 -4 2; -2 1 2; 4 2 5]`
-* `eig(A)`
+## Part 2. Writing Matlab programs
+
+Now we move from simple call-and-response to writing whole programs
+
+### Challenge to see if you remember last session
+
+* Solve the simulaneous equations for *a*, *b* and *c*:
+  - *a* + *c* = 4
+  - –*a* – 2*b* + *c* = –2
+  - 2*a* + 3*b* = 8
+
+### 1. Writing and calling simple functions
+
+* Difference between scripts and functions.
+* Let's do functions first.
+
+Join in:
+
+* Create a new file `myfunction.m` and inside it write:
+```
+function [y] = myfunction(n)
+  y = 3n+1;
+end;
+```
+* Save and run `myfunction(5)` from the command line
+* Breakpoints
+* Fix the file: `y = 3*n+1;`
 
 Try:
 
-* How to get eigenvectors? (Google or F1)
+* Create a function `my_first_my_last_my_everything` which takes a vector `v` and returns the sum of the first element in the vector and the last element in the vector
+* Test it out in the command line, running `my_first_my_last_my_everything([1:10])`.
 
-### 15. Plotting in 2D
+Join in:
+
+* Change `my_first_my_last_my_everything` so it outputs the first and last elements separately
+* Test it out:
+  - `[first, last] = my_first_my_last_my_everything(v)`
+  - `first`
+  - `last`
+
+### 2. Writing simple scripts
+
+Join in:
+
+* Create a script `myscript.m`
+* Inside let's put lots of things:
+```
+matrix_size = 4;
+M = magic(matrix_size);
+vector = M(1,:);
+[first, last] = my_first_my_last_my_everything(vector);
+i = myfunction(first*last);
+disp(i)
+```
+* Run the script.
+
+### 3. If
+
+Join in:
+
+* Create a function `signfunction(x)` so that the core functionality reads:
+```
+if x > 0
+  y = 1;
+elif x == 0
+  y = 0;
+else
+  y = -1;
+endif
+```
+* Note: `==` is not `=`
+
+Try:
+
+* Plot `signfunction(x)` from *x* = –5 to 5.
+* Plot `signfunction(x)*sin(x)` from *x* = –2π to 2π.
+
+Now try:
+
+* Change `myfunction(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
+
+### 4. For and while loops
+
+Join in:
+
+* Create a new script `squares_up_to.m`. Inside let's write
+```
+n = 10;
+for i=1:n
+  disp(i^2); % this squares i and then displays it on the screen
+end
+```
+* Run the script
+
+Try:
+
+* Change the script to display the first 10 odd cubes.
+
+Join in:
+
+* Create a new function `count_up_to.m`. Inside let's write
+```
+function count_up_to(n,start)
+  i = start;
+  disp(i);
+  while i < n
+    i = i + 1;
+    disp(i);
+  end
+end
+```
+
+Try:
+
+* The Collatz conjecture: adapt `myfunction(n)` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `myfunction.m`.
+
+* Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
+
+### 5. Plotting in 2D
 
 Join in:
 
@@ -255,168 +366,7 @@ Try:
 
 * The same but use `loglog`, `semilogx` or `semilogy` instead of `plot` (the syntax is the same). What do they do?
 
-### 16. Plotting in 3D
-
-Join in:
-
-* `t = [0:0.1:10];`
-* `x = sin(t);`
-* `y = cos(t);`
-* `z = t;`
-* `plot3(x,y,z)`
-* `grid on`
-
-Visualise *f*(*x,y*) = sin(*x*)cos(2*y*) for 0 ≤ *x,y* ≤ 2π:
-
-* Create grid 
-  - `x = linspace(0,2*pi,300)`
-  - `y = linspace(0,2*pi,300)`
-  - `[xg,yg] = meshgrid(x,y);`
-* `f = sin(xg).*cos(2*yg);`
-* `contour(xg,yg,f,20);`
-* `surf(x,y,f)`
-* `shading interp`
-
-### Challenge for the end of the day
-
-* Create a 10×10 matrix of random numbers (hint: use `rand`) and call it `A`
-* Find the eigenvalues of *A*
-* Show that the sum of the eigenvalues of *A* = the trace of *A*
-* Plot the eigenvalues on an Argand diagram, using a circular marker at each eigenvalue
-* Now add a row and column of zeros to *A*, to form *B*, which is therefore an 11×11 matrix. (Think about how you might want to do this!)
-* Now plot the eigenvalues of *B* on the same graph as the eigenvalues of *A*, in another colour.
-* What can you say about the eigenvalues of *B* compared to the eigenvalues of *A*?
-
-### Built-in functions to try
-
-Try:
-
-* `sin(x)`, `cos(x)`, `tan(x)`
-* `floor(x)`, `ceil(x)`
-* `max(x)`, `min(x)`
-* `triu(A)`, `rand(n)`
-
-## Part 2. Writing Matlab programs
-
-Now we move from simple call-and-response to writing whole programs
-
-### Challenge to see if you remember yesterday
-
-* Solve the simulaneous equations for *a*, *b* and *c*:
-  - *a* + *c* = 4
-  - –*a* – 2*b* + *c* = –2
-  - 2*a* + 3*b* = 8
-* Plot the graphs of sin(*ax*), sin(*bx*) and sin(*cx*) for *x* from –π to π, with these plots in different colours. Include a legend, a title and a label for the *x*-axis.
-
-### 17a. Writing and calling simple functions
-
-* Difference between scripts and functions. 
-* Let's do functions first.
-
-Join in:
-
-* Create a new file `myfunction.m` and inside it write:
-``` 
-function [y] = myfunction(n)
-  y = 3n+1;
-end;
-```
-* Save and run `myfunction(5)` from the command line
-* Breakpoints
-* Fix the file: `y = 3*n+1;`
-
-Try:
-
-* Create a function `my_first_my_last_my_everything` which takes a vector `v` and returns the sum of the first element in the vector and the last element in the vector
-* Test it out in the command line, running `my_first_my_last_my_everything([1:10])`.
-
-Join in:
-
-* Change `my_first_my_last_my_everything` so it outputs the first and last elements separately
-* Test it out:
-  - `[first, last] = my_first_my_last_my_everything(v)`
-  - `first`
-  - `last`
-
-### 17b. Writing simple scripts
-
-Join in:
-
-* Create a script `myscript.m`
-* Inside let's put lots of things:
-```
-matrix_size = 4;
-M = magic(matrix_size);
-vector = M(1,:);
-[first, last] = my_first_my_last_my_everything(vector);
-i = myfunction(first*last);
-disp(i)
-```
-* Run the script.
-
-### 18. If
-
-Join in:
-
-* Create a function `signfunction(x)` so that the core functionality reads:
-```
-if x > 0
-  y = 1;
-elif x == 0
-  y = 0;
-else
-  y = -1;
-endif
-```
-* Note: `==` is not `=`
-
-Try:
-
-* Plot `signfunction(x)` from *x* = –5 to 5.
-* Plot `signfunction(x)*sin(x)` from *x* = –2π to 2π.
-
-Now try:
-
-* Change `myfunction(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
-
-### 19. For and while loops
-
-Join in:
-
-* Create a new script `squares_up_to.m`. Inside let's write
-``` 
-n = 10;
-for i=1:n
-  disp(i^2); % this squares i and then displays it on the screen
-end
-```
-* Run the script
-
-Try:
-
-* Change the script to display the first 10 odd cubes.
-
-Join in:
-
-* Create a new function `count_up_to.m`. Inside let's write
-```
-function count_up_to(n,start)
-  i = start;
-  disp(i);
-  while i < n
-    i = i + 1;
-    disp(i);
-  end
-end
-```
-
-Try:
-
-* The Collatz conjecture: adapt `myfunction(n)` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `myfunction.m`.
-
-* Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
-
-### 20. Saving and reading data (incl. comments)
+### 6. Saving and reading data (incl. comments)
 
 There are lots of ways of saving and reading data in Matlab. A good question to ask is 'do I want to open the saved data in another program?'
 
@@ -454,6 +404,62 @@ Join in:
 * Plot them
 
 # Extra stuff
+
+### 14. Eigenvalues and eigenvectors
+
+* `A = [-2 -4 2; -2 1 2; 4 2 5]`
+* `eig(A)`
+
+Try:
+
+* How to get eigenvectors? (Google or F1)
+
+
+
+### 16. Plotting in 3D
+
+Join in:
+
+* `t = [0:0.1:10];`
+* `x = sin(t);`
+* `y = cos(t);`
+* `z = t;`
+* `plot3(x,y,z)`
+* `grid on`
+
+Visualise *f*(*x,y*) = sin(*x*)cos(2*y*) for 0 ≤ *x,y* ≤ 2π:
+
+* Create grid
+  - `x = linspace(0,2*pi,300)`
+  - `y = linspace(0,2*pi,300)`
+  - `[xg,yg] = meshgrid(x,y);`
+* `f = sin(xg).*cos(2*yg);`
+* `contour(xg,yg,f,20);`
+* `surf(x,y,f)`
+* `shading interp`
+
+### Challenge for the end of the day
+
+* Create a 10×10 matrix of random numbers (hint: use `rand`) and call it `A`
+* Find the eigenvalues of *A*
+* Show that the sum of the eigenvalues of *A* = the trace of *A*
+* Plot the eigenvalues on an Argand diagram, using a circular marker at each eigenvalue
+* Now add a row and column of zeros to *A*, to form *B*, which is therefore an 11×11 matrix. (Think about how you might want to do this!)
+* Now plot the eigenvalues of *B* on the same graph as the eigenvalues of *A*, in another colour.
+* What can you say about the eigenvalues of *B* compared to the eigenvalues of *A*?
+
+### Built-in functions to try
+
+Try:
+
+* `sin(x)`, `cos(x)`, `tan(x)`
+* `floor(x)`, `ceil(x)`
+* `max(x)`, `min(x)`
+* `triu(A)`, `rand(n)`
+
+### Challenge
+* Plot the graphs of sin(*ax*), sin(*bx*) and sin(*cx*) for *x* from –π to π, with these plots in different colours. Include a legend, a title and a label for the *x*-axis.
+
 
 ### Strings
 
