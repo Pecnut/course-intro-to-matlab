@@ -32,7 +32,7 @@ and compare the root with tolerances <img alt="$\varepsilon=0.1$" src="svgs/946d
 ### Task 2: Exploring the bi-section method and its limitations
 
 Find the roots of the equation:
-<p align="center"><img alt="$$&#10;f(x) = \sin x^2 -x + 5&#10;$$" src="svgs/83dd17408e87b56894988ad4fe007e9a.png" align="middle" width="151.4038383pt" height="18.312383099999998pt"/></p>
+<p align="center"><img alt="$$&#10;f(x) = \sin(x^2) -x + 5&#10;$$" src="svgs/6de5525d67b88f311455ff282ce00d05.png" align="middle" width="161.44961249999997pt" height="18.312383099999998pt"/></p>
 
 1. Alter _myfunc_ with this <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/>. Invoke _mybisection_ with interval <img alt="$[3.8,6]$" src="svgs/88f6ef37e874472bf419b4f5aea16dc6.png" align="middle" width="45.66218414999998pt" height="24.65753399999998pt"/> and a
 tolerance <img alt="$\varepsilon = 0.001$" src="svgs/5c373f96e30e64ee0f462b47e74f9d5e.png" align="middle" width="67.02619605pt" height="21.18721440000001pt"/>.
@@ -46,21 +46,21 @@ What is the problem when finding the roots? [Plot the function to help your
 judgement].
 5. Find the roots of the equation:
 <p align="center"><img alt="$$&#10;f(x) = \tan x&#10;$$" src="svgs/f3b7999f478595ec721bbc465e6d9a16.png" align="middle" width="89.79447675pt" height="16.438356pt"/></p>
+
 within the range <img alt="$[1,2]$" src="svgs/4bacaa9b3789e39bb761a7b8f0b1cc7a.png" align="middle" width="32.87674994999999pt" height="24.65753399999998pt"/>. What is the problem when finding the roots? [Plot the
 function, as points, to help your judgement].
 
 ### Matlab root finding functions
 
 Beside using your own function _mybisection_, you could also use some of the Matlab
-built in functions to find roots. There are two major root finding functions: a)_roots_, to
+built in functions to find roots. There are two major root finding functions: a) _roots_, to
 determine the zeros of a specified polynomial, and b) _fzero_, to determine the roots of
 any user defined function. Explore the use of these two functions within the _Help_.
 
 1. Find find the roots of the polynomial <img alt="$p(x)=-x^3 + 5x^2 +2x-7$" src="svgs/802f5770942b99cb51644267246d4b36.png" align="middle" width="193.01913674999997pt" height="26.76175259999998pt"/>
 Verify that the roots you have found are correct by plotting the polynomial.
 
-2. Find the roots of the function <img alt="$f(x) = \sin x^2 - x + 5$" src="svgs/8ae0e6c7afe581388f3de15d86b3d070.png" align="middle" width="151.4038383pt" height="26.76175259999998pt"/>. Use _fzero_ with initial
+2. Find the roots of the function <img alt="$f(x) = \sin(x^2) - x + 5$" src="svgs/bb657787e09384948718abbaef6c56bc.png" align="middle" width="161.44961249999997pt" height="26.76175259999998pt"/>. Use _fzero_ with initial
 point <img alt="$x = 5$" src="svgs/1486f15d8fb65398773c720894089ae0.png" align="middle" width="39.53182859999999pt" height="21.18721440000001pt"/>. Define <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/> in _myfunction_ from Task 1.
-Verify that the root you have found is correct by plotting <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/>. The function <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/>
-has multiple roots: try to determine a few more, still using _fzero_.
+Verify that the root you have found is correct by plotting <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/>. The function <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/> has multiple roots; try to determine a few more, still using _fzero_.
 
