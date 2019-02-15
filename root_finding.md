@@ -14,7 +14,7 @@ shorter intervals <img alt="$[a,x]$" src="svgs/78803621c5e4e61a79d2880c449812f3.
 interval as a new starting interval. The procedure is completed until the bracketing
 interval is less than a specified tolerance <img alt="$\varepsilon$" src="svgs/9ae7733dac2b7b4470696ed36239b676.png" align="middle" width="7.66550399999999pt" height="14.15524440000002pt"/>. 
 
-<img src="/svgs/bisection.png" alt="illustration of the bisection method" width="505" />
+<img src="/svgs/bisection.png" alt="illustration of the bisection method" width="250" />
 
 Find the roots of the equation:
 <p align="center"><img alt="$$&#10;f(x) = x^2 + (x-2)^3 -5 = 0&#10;$$" src="svgs/835d2a9f275cfad6e03f30643e0f7abb.png" align="middle" width="207.0886257pt" height="18.312383099999998pt"/></p>
@@ -40,15 +40,10 @@ tolerance <img alt="$\varepsilon = 0.001$" src="svgs/5c373f96e30e64ee0f462b47e74
 same tolerance <img alt="$\varepsilon = 0.001$" src="svgs/5c373f96e30e64ee0f462b47e74f9d5e.png" align="middle" width="67.02619605pt" height="21.18721440000001pt"/>.
 3. Why are the two roots different? [Plot the function in a range that comprises
 both the intervals, i.e. 0 to 10, to explore what is happening].
-4. Find the roots of the equation:
-<p align="center"><img alt="$$&#10;f(x) = (x-2)^2&#10;$$" src="svgs/7399efce7909c4af98007611be722d2b.png" align="middle" width="110.95883369999999pt" height="18.312383099999998pt"/></p>
-What is the problem when finding the roots? [Plot the function to help your
+4. Find the roots of the equation <img alt="$f(x) = (x-2)^2$" src="svgs/c629c1045710d6e63387bde1815f51fd.png" align="middle" width="110.95883369999999pt" height="26.76175259999998pt"/>. What is the problem when finding the roots? [Plot the function to help your
 judgement].
 
-5. Find the roots of the equation:
-<p align="center"><img alt="$$&#10;f(x) = \tan x&#10;$$" src="svgs/f3b7999f478595ec721bbc465e6d9a16.png" align="middle" width="89.79447675pt" height="16.438356pt"/></p>
-
-within the range <img alt="$[1,2]$" src="svgs/4bacaa9b3789e39bb761a7b8f0b1cc7a.png" align="middle" width="32.87674994999999pt" height="24.65753399999998pt"/>. What is the problem when finding the roots? [Plot the
+5. Find the roots of the equation <img alt="$f(x) = \tan x$" src="svgs/d95d9a659b47cde2f37126ab560f9780.png" align="middle" width="89.79447674999999pt" height="24.65753399999998pt"/> within the range <img alt="$[1,2]$" src="svgs/4bacaa9b3789e39bb761a7b8f0b1cc7a.png" align="middle" width="32.87674994999999pt" height="24.65753399999998pt"/>. What is the problem when finding the roots? [Plot the
 function, as points, to help your judgement].
 
 ### Matlab root finding functions
@@ -58,8 +53,7 @@ built in functions to find roots. There are two major root finding functions: a)
 determine the zeros of a specified polynomial, and b) _fzero_, to determine the roots of
 any user defined function. Explore the use of these two functions within the _Help_.
 
-1. Find find the roots of the polynomial <img alt="$p(x)=-x^3 + 5x^2 +2x-7$" src="svgs/802f5770942b99cb51644267246d4b36.png" align="middle" width="193.01913674999997pt" height="26.76175259999998pt"/>
-Verify that the roots you have found are correct by plotting the polynomial.
+1. Find find the roots of the polynomial <img alt="$p(x)=-x^3 + 5x^2 +2x-7$" src="svgs/802f5770942b99cb51644267246d4b36.png" align="middle" width="193.01913674999997pt" height="26.76175259999998pt"/>. Verify that the roots you have found are correct by plotting the polynomial.
 
 2. Find the roots of the function <img alt="$f(x) = \sin(x^2) - x + 5$" src="svgs/bb657787e09384948718abbaef6c56bc.png" align="middle" width="161.44961249999997pt" height="26.76175259999998pt"/>. Use _fzero_ with initial
 point <img alt="$x = 5$" src="svgs/1486f15d8fb65398773c720894089ae0.png" align="middle" width="39.53182859999999pt" height="21.18721440000001pt"/>. Define <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/> in _myfunction_ from Task 1.
