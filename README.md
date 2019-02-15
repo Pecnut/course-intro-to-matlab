@@ -225,7 +225,7 @@ Join in:
 ```
 function [y] = myfunction(n)
   y = 3n+1;
-end;
+end
 ```
 * Why won't this work?
 * Fix the file: `y = 3*n+1;`
