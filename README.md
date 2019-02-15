@@ -227,9 +227,9 @@ function [y] = myfunction(n)
   y = 3n+1;
 end;
 ```
-* Save and run `myfunction(5)` from the command line
-* Breakpoints
+* Why won't this work?
 * Fix the file: `y = 3*n+1;`
+* Save and run `myfunction(5)` from the command line
 
 Try:
 
@@ -259,70 +259,9 @@ i = myfunction(first*last);
 disp(i)
 ```
 * Run the script.
+* Breakpoints
 
-### 3. If
-
-Join in:
-
-* Create a function `signfunction(x)` so that the core functionality reads:
-```
-if x > 0
-  y = 1;
-elseif x == 0
-  y = 0;
-else
-  y = -1;
-end
-```
-* Note: `==` is not `=`
-
-Try:
-
-* Plot `signfunction(x)` from *x* = –5 to 5.
-* Plot `signfunction(x)*sin(x)` from *x* = –2π to 2π.
-
-Now try:
-
-* Change `myfunction(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
-
-### 4. For and while loops
-
-Join in:
-
-* Create a new script `squares_up_to.m`. Inside let's write
-```
-n = 10;
-for i=1:n
-  disp(i^2); % this squares i and then displays it on the screen
-end
-```
-* Run the script
-
-Try:
-
-* Change the script to display the first 10 odd cubes.
-
-Join in:
-
-* Create a new function `count_up_to.m`. Inside let's write
-```
-function count_up_to(n,start)
-  i = start;
-  disp(i);
-  while i < n
-    i = i + 1;
-    disp(i);
-  end
-end
-```
-
-Try:
-
-* The Collatz conjecture: adapt `myfunction(n)` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `myfunction.m`.
-
-* Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
-
-### 5. Plotting in 2D
+### 3. Plotting in 2D
 
 Join in:
 
@@ -365,6 +304,68 @@ Join in:
 Try:
 
 * The same but use `loglog`, `semilogx` or `semilogy` instead of `plot` (the syntax is the same). What do they do?
+
+### 4. If
+
+Join in:
+
+* Create a function `signfunction(x)` so that the core functionality reads:
+```
+if x > 0
+  y = 1;
+elseif x == 0
+  y = 0;
+else
+  y = -1;
+end
+```
+* Note: `==` is not `=`
+
+Try:
+
+* Plot `signfunction(x)` from *x* = –5 to 5.
+* Plot `signfunction(x)*sin(x)` from *x* = –2π to 2π.
+
+Now try:
+
+* Change `myfunction(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
+
+### 5. For and while loops
+
+Join in:
+
+* Create a new script `squares_up_to.m`. Inside let's write
+```
+n = 10;
+for i=1:n
+  disp(i^2); % this squares i and then displays it on the screen
+end
+```
+* Run the script
+
+Try:
+
+* Change the script to display the first 10 odd cubes.
+
+Join in:
+
+* Create a new function `count_up_to.m`. Inside let's write
+```
+function count_up_to(n,start)
+  i = start;
+  disp(i);
+  while i < n
+    i = i + 1;
+    disp(i);
+  end
+end
+```
+
+Try:
+
+* The Collatz conjecture: adapt `myfunction(n)` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `myfunction.m`.
+
+* Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
 
 ### 6. Saving and reading data (incl. comments)
 
