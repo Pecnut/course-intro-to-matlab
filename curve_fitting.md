@@ -11,7 +11,7 @@ Commonly used functions for fitting are polynomials. Fitting a set of <img alt="
 consists of finding the optimal combination of coefficients <img alt="$c_n,c_{n-1},\dots,c_2,c_1,c_0$" src="svgs/72ffe5b7cef438ee72e52050f929c06d.png" align="middle" width="150.03996809999998pt" height="14.15524440000002pt"/> such that the curve <img alt="$p(x)$" src="svgs/c9ea84eb1460d2895e0cf5125bd7f7b5.png" align="middle" width="30.450987599999987pt" height="24.65753399999998pt"/> fits the data overall. The function _polyfit_ in Matlab generates these
 coefficients, with the principle of the least square.
 
-1. Use dlmread to read in the first 2 columns of the file _experiment.txt_ and store
+1. Use dlmread to read in the first 2 columns of the file [_experiment.txt_](./experiment.txt) and store
 them in a matrix. Extract the first and second columns of the matrix into two
 vectors _xexp_ and _yexp_, respectively. Plot _yexp_ vs _xexp_ as points.
 
@@ -62,7 +62,7 @@ order desired for the fitting polynomial, and outputs the fitting polynomial at
 points _x_ and the total error <img alt="$E$" src="svgs/84df98c65d88c6adf15d4645ffa25e47.png" align="middle" width="13.08219659999999pt" height="22.465723500000017pt"/>. You may test the function with the data of Tasks
 1 and 2.
 
-2. Read the file _wave.txt_, containing experimental data points. Fit these points
+2. Read the file [_wave.txt_](./wave.txt), containing experimental data points. Fit these points
 with polynomials of order 1 up to 8.
 Within the same figure, but in two different tiled axes (to do so explore and
 use the command subplot) plot:
@@ -80,6 +80,6 @@ measured extension (in mm) at 10 predefined loads of 10N to 100N in increments o
 Write a Matlab script that fits a linear curve to the measurements for each spring and
 deduces its spring constant <img alt="$k$" src="svgs/63bb9849783d01d91403bc9a5fea12a2.png" align="middle" width="9.075367949999992pt" height="22.831056599999986pt"/>.
 
-1. Read in the measured data from springdata.csv and calculate the spring
+1. Read in the measured data from [_springdata.csv_](./springdata.csv) and calculate the spring
 stiffness for each spring. Save the spring serial number followed by the
 computed spring stiffness in a separate file called _stiffness.csv_.
