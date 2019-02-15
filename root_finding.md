@@ -1,6 +1,6 @@
-### Numerical Root Finding 
+## Numerical Root Finding 
 
-## Task 1: The Bi-section scheme
+### Task 1: The Bi-section scheme
 
 A numerical solution (or __root__) of an equation <img alt="$f(x)=0$" src="svgs/a6fc63aa1efb41cce557cf8cb517441f.png" align="middle" width="62.134673699999986pt" height="24.65753399999998pt"/> is a value of <img alt="$x$" src="svgs/332cc365a4987aacce0ead01b8bdcc0b.png" align="middle" width="9.39498779999999pt" height="14.15524440000002pt"/> that satisfies
 the equation approximately, but not exactly. A simple and robust algorithm to
@@ -12,5 +12,7 @@ To start with, the midpoint between <img alt="$[a,b]$" src="svgs/fe477a2781d275b
 estimate of the numerical solution. The true root is bracketed within either one of the
 shorter intervals <img alt="$[a,x]$" src="svgs/78803621c5e4e61a79d2880c449812f3.png" align="middle" width="34.52247314999999pt" height="24.65753399999998pt"/> or <img alt="$[x,b]$" src="svgs/d839a293adc00245c3e2b75e7d4f1a33.png" align="middle" width="32.88811514999999pt" height="24.65753399999998pt"/>. The process is repeated, considering this shorter
 interval as a new starting interval. The procedure is completed until the bracketing
-interval is less than a specified tolerance <img alt="$\varepsilon$" src="svgs/9ae7733dac2b7b4470696ed36239b676.png" align="middle" width="7.66550399999999pt" height="14.15524440000002pt"/>.
+interval is less than a specified tolerance <img alt="$\varepsilon$" src="svgs/9ae7733dac2b7b4470696ed36239b676.png" align="middle" width="7.66550399999999pt" height="14.15524440000002pt"/>. 
+
+<img src="/svgs/bisection.png" alt="illustration of the bisection method"/>
 
