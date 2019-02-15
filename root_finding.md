@@ -44,6 +44,7 @@ both the intervals, i.e. 0 to 10, to explore what is happening].
 <p align="center"><img alt="$$&#10;f(x) = (x-2)^2&#10;$$" src="svgs/7399efce7909c4af98007611be722d2b.png" align="middle" width="110.95883369999999pt" height="18.312383099999998pt"/></p>
 What is the problem when finding the roots? [Plot the function to help your
 judgement].
+
 5. Find the roots of the equation:
 <p align="center"><img alt="$$&#10;f(x) = \tan x&#10;$$" src="svgs/f3b7999f478595ec721bbc465e6d9a16.png" align="middle" width="89.79447675pt" height="16.438356pt"/></p>
 
