@@ -485,3 +485,7 @@ Try:
 * Find the last letter of your surname
 * Output the first and last letter of your surname, put together
 * If `conversation = ['hello there', 'general kenobi']` (with single quotes), what is `conversation(2)`?
+
+### [Curve Fitting](./curve_fitting.md)
+
+### [Numerical Root Finding](./root_finding.md)

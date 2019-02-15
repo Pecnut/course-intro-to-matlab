@@ -46,7 +46,7 @@ judgement].
 5. Find the roots of the equation <img alt="$f(x) = \tan x$" src="svgs/d95d9a659b47cde2f37126ab560f9780.png" align="middle" width="89.79447674999999pt" height="24.65753399999998pt"/> within the range <img alt="$[1,2]$" src="svgs/4bacaa9b3789e39bb761a7b8f0b1cc7a.png" align="middle" width="32.87674994999999pt" height="24.65753399999998pt"/>. What is the problem when finding the roots? [Plot the
 function, as points, to help your judgement].
 
-### Matlab root finding functions
+### Task3: Matlab root finding functions
 
 Beside using your own function _mybisection_, you could also use some of the Matlab
 built in functions to find roots. There are two major root finding functions: a) _roots_, to
