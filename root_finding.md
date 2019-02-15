@@ -59,3 +59,4 @@ any user defined function. Explore the use of these two functions within the _He
 point <img alt="$x = 5$" src="svgs/1486f15d8fb65398773c720894089ae0.png" align="middle" width="39.53182859999999pt" height="21.18721440000001pt"/>. Define <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/> in _myfunction_ from Task 1.
 Verify that the root you have found is correct by plotting <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/>. The function <img alt="$f(x)$" src="svgs/7997339883ac20f551e7f35efff0a2b9.png" align="middle" width="31.99783454999999pt" height="24.65753399999998pt"/> has multiple roots; try to determine a few more, still using _fzero_.
 
+(Back to [README.md](./README.md))

@@ -83,3 +83,5 @@ deduces its spring constant <img alt="$k$" src="svgs/63bb9849783d01d91403bc9a5fe
 1. Read in the measured data from [_springdata.csv_](./springdata.csv) and calculate the spring
 stiffness for each spring. Save the spring serial number followed by the
 computed spring stiffness in a separate file called _stiffness.csv_.
+
+(Back to [README.md](./README.md))
