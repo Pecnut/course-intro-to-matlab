@@ -268,11 +268,11 @@ Join in:
 ```
 if x > 0
   y = 1;
-elif x == 0
+elseif x == 0
   y = 0;
 else
   y = -1;
-endif
+end
 ```
 * Note: `==` is not `=`
 
