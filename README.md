@@ -1,10 +1,10 @@
 # CM Hub: Introduction to Matlab
 Introduction to Matlab course for the CM Hub at Imperial College
 
-* **Part 1:** Call-and-response Matlab
-* **Part 2:** Writing Matlab programs
+* **Part 1:** Call-and-response Matlab, basic arithmetic, simple scripts, 2D plots
+* **Part 2:** Functions, Collatz conjecture, if, for, while, data analysis, linear algebra
 
-## Part 1. Call-and-response Matlab
+## Part 1. Call-and-response Matlab, basic arithmetic, simple scripts, 2D plots
 
 ### 1. Where Matlab sits among other languages
 <img src="/readme-images/maths-not-maths-languages.png" width="50%">
@@ -48,8 +48,8 @@ Join in:
 * `x`
 * `x=-9`
 * `x`
-* `length = 3` (long names are good)
-* `area = length^2`
+* `width = 3` (long names are good)
+* `area = width^2`
 * `y=12/2+5`
 * `(y+1)^2`
 * `y=sin(x)*cos(x)`
@@ -72,6 +72,8 @@ Try:
 * What's the difference between `x=40` and `x=40;` ?
 
 ### 7. Creating vectors and matrices
+
+The building block of Matlab is the *matrix*. These can represent lists, data tables, or matrices as mathematical objects.
 
 Join in:
 
@@ -104,7 +106,7 @@ Join in:
 * `A(3,4:end)`
 * `A(1:end,4)`
 * `A(:,4)`
-* `sum(A(:,4))`
+* `sum(A(:,4))`: `sum` sums the columns
 
 Try:
 
@@ -119,7 +121,7 @@ Now try:
 
 * Show that the `sum` of the first column of `A` = the `sum` of the last column of `A`
 * Find the `sum` of the diagonal of `A` (hint: search for the function that gives the diagonal of `A`... or guess!)
-* Harder! Find the `sum` of the negative diagonal of `A`. Hint: try showing the rows of `A` in reverse before using `diag`
+* Harder! Find the `sum` of the '/'-leaning diagonal of `A`. Hint: try showing the rows of `A` in reverse before using `diag`
 * Harder! Produce the elements of `A` for which both coordinates are odd
 * Replace the bottom row of `A` with zeros
 
@@ -144,126 +146,32 @@ Try:
 * `sum` the squares from 1 to 5
 * What is the mean of the powers of 2 from the zeroth power to the sixth power? (Google the function to find the mean... or guess!)
 
-### 10. Matrix arithmetic
+### 10. Writing simple scripts
+
+A script is the simplest type of Matlab program.
 
 Join in:
 
-* `A = [1 0 5; 2 1 6; 3 4 0]`
-* `A.^2`
-* `A^2`
-
-Try:
-
-* Create a 2x3 matrix, call it `B`
-* Create a 3x4 matrix, call it `C`
-* Try calculating `B*C` and `C*B`
-* Multiply `B` by the transpose of `B`
-* Make one of the elements of `B` imaginary (`i`)
-* Calculate `B'`. What does the apostrophe *actually* do?
-
-### 11. Size
-
-Size gives rows × columns
-
-* `size(A)`
-* `size(B)`
-* `x = [1:10]`
-* `size(x)` ... note it's 1×10 (a row vector), not 10×1 (a column vectors).
-
-Vectors by default are row vectors in Matlab.
-
-### 12. More matrix arithmetic
-
-Join in:
-
-* `A`
-* Let's multiply `A` by (3 1 4)<sup>T</sup>
-* `x = [3 1 4]'` (note apostrophe) or `x = [3; 1; 4]` (note semicolons)
-* `A*x`
-
-Try:
-
-* Let `x = [3 1 4]` (without the apostrophe). Will calculating `A*x` work? Try it.
-* Create the 3×3 identity matrix `I = eye(3)`. Multiply *I* by *x*.
-
-### 13. Inversion of matrices (and when this is a bad idea)
-
-Join in:
-
-* `A`
-* `inv(A)`
-* Let's solve *Ax* = (–1 0 1)<sup>T</sup>
-* `b = [-1; 0; 1]`
-* If *Ax* = *b* then *x* = *A*<sup>–1</sup>*b*, so `inv(A)*b`
-* `A\b`
-
-Try:
-
-* Solve the system of equations *x*+*y*=2, 3*y*–*x*=3.
-* Let `A = [1 2 3; 4 5 6; 5 7 9]` and `b = [-1; 0; 1]`. Solve *Ax=b*. What is the determinant of *A*? (Google!)
-
-
-## Part 2. Writing Matlab programs
-
-Now we move from simple call-and-response to writing whole programs
-
-### Challenge to see if you remember last session
-
-* Solve the simulaneous equations for *a*, *b* and *c*:
-  - *a* + *c* = 4
-  - –*a* – 2*b* + *c* = –2
-  - 2*a* + 3*b* = 8
-
-### 1. Writing and calling simple functions
-
-* Difference between scripts and functions.
-* Let's do functions first.
-
-Join in:
-
-* Create a new file `myfunction.m` and inside it write:
+* Create a script `magic_square_test.m`
+* Let's see if switching the top and bottom row of a magic square keeps it a magic square:
 ```
-function [y] = myfunction(n)
-  y = 3n+1;
-end
-```
-* Why won't this work?
-* Fix the file: `y = 3*n+1;`
-* Save and run `myfunction(5)` from the command line
-
-Try:
-
-* Create a function `my_first_my_last_my_everything` which takes a vector `v` and returns the sum of the first element in the vector and the last element in the vector
-* Test it out in the command line, running `my_first_my_last_my_everything([1:10])`.
-
-Join in:
-
-* Change `my_first_my_last_my_everything` so it outputs the first and last elements separately
-* Test it out:
-  - `[first, last] = my_first_my_last_my_everything(v)`
-  - `first`
-  - `last`
-
-### 2. Writing simple scripts
-
-Join in:
-
-* Create a script `myscript.m`
-* Inside let's put lots of things:
-```
-matrix_size = 4;
-M = magic(matrix_size);
-vector = M(1,:);
-[first, last] = my_first_my_last_my_everything(vector);
-i = myfunction(first*last);
-disp(i)
+n = 4; % matrix size
+M = magic(n);
+top_row = M(1,:);
+bottom_row = M(end,:);
+M(1,:) = bottom_row;
+M(end,:) = top_row;
+disp(sum(M)); % to display we can use 'disp' or just leave off the semicolon
+disp(sum(diag(M)));
+disp(n*(n^2+1)/2); % magic constant
 ```
 * Run the script.
 * Breakpoints
+* Change the script so that we do it with a matrix of size 3 instead.
 
-### 3. Plotting in 2D
+### 11. Plotting in 2D
 
-Join in:
+Join in, putting this in a script, `first_plot.m`:
 
 * `x = [0:10]`
 * `y = exp(x)`
@@ -280,7 +188,7 @@ Join in:
 * `x = [0:0.1:10]`
 * `y = exp(x)`
 * `plot(x,y,'r-')`
-* `plot(x,y,'go')`
+* Change to: `plot(x,y,'go')`
 
 Try:
 
@@ -295,7 +203,7 @@ Join in:
 * Now let's try multiple plots
 * `x = [0:0.1:10]`
 * `y1 = exp(x)`
-* `y2 = exp(2*x)`
+* `y2 = exp(0.9*x)`
 * `plot(x,y1,'r-')`
 * `hold on`
 * `plot(x,y2,'k--')`
@@ -305,11 +213,50 @@ Try:
 
 * The same but use `loglog`, `semilogx` or `semilogy` instead of `plot` (the syntax is the same). What do they do?
 
-### 4. If
+
+## Part 2. Functions, Collatz conjecture, if, for, while, data analysis, linear algebra
+
+Now we move from simple call-and-response to writing whole programs
+
+### Challenge to see if you remember last session
+
+* Plot the function `sin(x)` and `cos(x)` from x = 0 to 2π on the same graph, giving them labels.
+
+### 1. Writing and calling simple functions
+
+* Difference between scripts and functions.
+* Let's do functions first.
 
 Join in:
 
-* Create a function `signfunction(x)` so that the core functionality reads:
+* Create a new file `collatz.m` and inside it write:
+```
+function y = collatz(n)
+  y = 3n+1;
+end
+```
+* Why won't this work?
+* Fix the file: `y = 3*n+1;`
+* Save and run `collatz(5)` from the command line
+
+Try:
+
+* Create a function `first_and_last` which takes a vector `v` and returns the sum of the first element in the vector and the last element in the vector
+* Test it out in the command line, letting `test_vector=[1:10]` and running `first_and_last(test_vector)`.
+
+Join in:
+
+* Change `first_and_last` so it outputs the first and last elements separately
+* Test it out:
+  - `[first, last] = first_and_last(v)`
+  - `first`
+  - `last`
+
+### 2. If
+
+Join in:
+
+* Create a function `function y = signfunction(x)` so that the core functionality reads:
 ```
 if x > 0
   y = 1;
@@ -323,14 +270,9 @@ end
 
 Try:
 
-* Plot `signfunction(x)` from *x* = –5 to 5.
-* Plot `signfunction(x)*sin(x)` from *x* = –2π to 2π.
+* Change `collatz(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
 
-Now try:
-
-* Change `myfunction(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
-
-### 5. For and while loops
+### 3. For and while loops
 
 Join in:
 
@@ -351,8 +293,8 @@ Join in:
 
 * Create a new function `count_up_to.m`. Inside let's write
 ```
-function count_up_to(n,start)
-  i = start;
+function count_up_to(n)
+  i = 1;
   disp(i);
   while i < n
     i = i + 1;
@@ -363,11 +305,11 @@ end
 
 Try:
 
-* The Collatz conjecture: adapt `myfunction(n)` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `myfunction.m`.
+* The Collatz conjecture: adapt `collatz(n)` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `collatz.m`.
 
 * Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
 
-### 6. Saving and reading data (incl. comments)
+### 4. Saving and reading data
 
 There are lots of ways of saving and reading data in Matlab. A good question to ask is 'do I want to open the saved data in another program?'
 
@@ -393,6 +335,65 @@ Join in:
 * Save the EUR/GBP data matrix
 * `csvwrite('exchange_rates_pounds.csv',data_pounds)`
 * Look at it in Excel
+
+
+### 5. Linear algebra: Matrix arithmetic
+
+Join in:
+
+* `A = [1 0 5; 2 1 6; 3 4 0]`
+* `A.^2`
+* `A^2`
+
+Try:
+
+* Create a 2x3 matrix, call it `B`
+* Create a 3x4 matrix, call it `C`
+* Try calculating `B*C` and `C*B`
+* Multiply `B` by the transpose of `B`
+* Make one of the elements of `B` imaginary (`i`)
+* Calculate `B'`. What does the apostrophe *actually* do?
+
+### 6. Size
+
+Size gives rows × columns
+
+* `size(A)`
+* `size(B)`
+* `x = [1:10]`
+* `size(x)` ... note it's 1×10 (a row vector), not 10×1 (a column vectors).
+
+Vectors by default are row vectors in Matlab.
+
+### 7. Linear algebra: More matrix arithmetic
+
+Join in:
+
+* `A`
+* Let's multiply `A` by (3 1 4)<sup>T</sup>
+* `x = [3 1 4]'` (note apostrophe) or `x = [3; 1; 4]` (note semicolons)
+* `A*x`
+
+Try:
+
+* Let `x = [3 1 4]` (without the apostrophe). Will calculating `A*x` work? Try it.
+* Create the 3×3 identity matrix `I = eye(3)`. Multiply *I* by *x*.
+
+### 8. Linear algebra: Inversion of matrices (and when this is a bad idea)
+
+Join in:
+
+* `A`
+* `inv(A)`
+* Let's solve *Ax* = (–1 0 1)<sup>T</sup>
+* `b = [-1; 0; 1]`
+* If *Ax* = *b* then *x* = *A*<sup>–1</sup>*b*, so `inv(A)*b`
+* `A\b`
+
+Try:
+
+* Solve the system of equations *x*+*y*=2, -*x*+3*y*=3.
+* Let `A = [1 2 3; 4 5 6; 5 7 9]` and `b = [-1; 0; 1]`. Solve *Ax=b*. What is the determinant of *A*? (Google!)
 
 ### End of day challenge
 
