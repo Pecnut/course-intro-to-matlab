@@ -4,7 +4,7 @@ Introduction to Matlab course for the CM Hub at Imperial College
 * **Part 1:** Call-and-response Matlab, basic arithmetic, simple scripts, 2D plots
 * **Part 2:** Functions, Collatz conjecture, if, for, while, data analysis, linear algebra
 
-## Part 1. Call-and-response Matlab, basic arithmetic, simple scripts, 2D plots
+## Part 1. Call-and-response Matlab, basic arithmetic, simple scripts
 
 ### 1. Where Matlab sits among other languages
 <img src="/readme-images/maths-not-maths-languages.png" width="50%">
@@ -114,7 +114,7 @@ Try:
 * Get the element in the 1st row, 1st column
 * Get the element in the 5th row, 2nd column
 * Get all elements in the last row
-* Get the element in the 6 row, 4th column (...)
+* Get the element in the 6th row, 4th column (...)
 * What does `A([2 1 1 1],4)` do? Try it.
 
 Now try:
@@ -169,7 +169,9 @@ disp(n*(n^2+1)/2); % magic constant
 * Breakpoints
 * Change the script so that we do it with a matrix of size 3 instead.
 
-### 11. Plotting in 2D
+## Part 2. Plotting, functions, Collatz conjecture, if, for, while, data analysis, linear algebra
+
+### 1. Plotting in 2D
 
 Join in, putting this in a script, `first_plot.m`:
 
@@ -213,16 +215,8 @@ Try:
 
 * The same but use `loglog`, `semilogx` or `semilogy` instead of `plot` (the syntax is the same). What do they do?
 
-
-## Part 2. Functions, Collatz conjecture, if, for, while, data analysis, linear algebra
-
+### 2. Writing and calling simple functions
 Now we move from simple call-and-response to writing whole programs
-
-### Challenge to see if you remember last session
-
-* Plot the function `sin(x)` and `cos(x)` from x = 0 to 2π on the same graph, giving them labels.
-
-### 1. Writing and calling simple functions
 
 * Difference between scripts and functions.
 * Let's do functions first.
@@ -252,7 +246,7 @@ Join in:
   - `first`
   - `last`
 
-### 2. If
+### 3. If
 
 Join in:
 
@@ -272,7 +266,7 @@ Try:
 
 * Change `collatz(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
 
-### 3. For and while loops
+### 4. For and while loops
 
 Join in:
 
@@ -309,7 +303,7 @@ Try:
 
 * Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
 
-### 4. Saving and reading data
+### 5. Saving and reading data
 
 There are lots of ways of saving and reading data in Matlab. A good question to ask is 'do I want to open the saved data in another program?'
 
@@ -337,7 +331,7 @@ Join in:
 * Look at it in Excel
 
 
-### 5. Linear algebra: Matrix arithmetic
+### 6. Linear algebra: Matrix arithmetic
 
 Join in:
 
@@ -354,7 +348,7 @@ Try:
 * Make one of the elements of `B` imaginary (`i`)
 * Calculate `B'`. What does the apostrophe *actually* do?
 
-### 6. Size
+### 7. Size
 
 Size gives rows × columns
 
@@ -365,7 +359,7 @@ Size gives rows × columns
 
 Vectors by default are row vectors in Matlab.
 
-### 7. Linear algebra: More matrix arithmetic
+### 8. Linear algebra: More matrix arithmetic
 
 Join in:
 
@@ -379,7 +373,7 @@ Try:
 * Let `x = [3 1 4]` (without the apostrophe). Will calculating `A*x` work? Try it.
 * Create the 3×3 identity matrix `I = eye(3)`. Multiply *I* by *x*.
 
-### 8. Linear algebra: Inversion of matrices (and when this is a bad idea)
+### 9. Linear algebra: Inversion of matrices (and when this is a bad idea)
 
 Join in:
 
@@ -461,6 +455,10 @@ Try:
 
 ### Challenge
 * Plot the graphs of sin(*ax*), sin(*bx*) and sin(*cx*) for *x* from –π to π, with these plots in different colours. Include a legend, a title and a label for the *x*-axis.
+
+### Challenge
+
+* Plot the function `sin(x)` and `cos(x)` from x = 0 to 2π on the same graph, giving them labels.
 
 
 ### Strings
