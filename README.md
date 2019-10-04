@@ -169,7 +169,7 @@ disp(n*(n^2+1)/2); % magic constant
 * Breakpoints
 * Change the script so that we do it with a matrix of size 3 instead.
 
-## Part 2. Plotting, functions, Collatz conjecture, if, for, while, data analysis, linear algebra
+## Part 2. Plotting, functions, Collatz conjecture, if, for, while
 
 ### 1. Plotting in 2D
 
@@ -303,7 +303,9 @@ Try:
 
 * Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
 
-### 5. Saving and reading data
+## Part 3. Data analysis, linear algebra
+
+### 1. Saving and reading data
 
 There are lots of ways of saving and reading data in Matlab. A good question to ask is 'do I want to open the saved data in another program?'
 
@@ -331,7 +333,7 @@ Join in:
 * Look at it in Excel
 
 
-### 6. Linear algebra: Matrix arithmetic
+### 2. Linear algebra: Matrix arithmetic
 
 Join in:
 
@@ -348,7 +350,7 @@ Try:
 * Make one of the elements of `B` imaginary (`i`)
 * Calculate `B'`. What does the apostrophe *actually* do?
 
-### 7. Size
+### 3. Size
 
 Size gives rows × columns
 
@@ -359,7 +361,7 @@ Size gives rows × columns
 
 Vectors by default are row vectors in Matlab.
 
-### 8. Linear algebra: More matrix arithmetic
+### 4. Linear algebra: More matrix arithmetic
 
 Join in:
 
@@ -373,7 +375,7 @@ Try:
 * Let `x = [3 1 4]` (without the apostrophe). Will calculating `A*x` work? Try it.
 * Create the 3×3 identity matrix `I = eye(3)`. Multiply *I* by *x*.
 
-### 9. Linear algebra: Inversion of matrices (and when this is a bad idea)
+### 5. Linear algebra: Inversion of matrices (and when this is a bad idea)
 
 Join in:
 
