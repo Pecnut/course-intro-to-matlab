@@ -1,8 +1,17 @@
 # CM Hub: Introduction to Matlab
 Introduction to Matlab course for the CM Hub at Imperial College
 
-* **Part 1:** Call-and-response Matlab, basic arithmetic, simple scripts, 2D plots
-* **Part 2:** Functions, Collatz conjecture, if, for, while, data analysis, linear algebra
+3 × 2 hour classes
+
+* **Part 1:** Call-and-response Matlab, basic arithmetic, simple scripts
+* **Part 2:** 2D plots, functions, Collatz conjecture, if, for, while
+* **Part 3:** Data analysis, linear algebra, 3D plots
+
+## Prerequisites
+* No programming experience is required
+* Students are welcome to bring their own fully charged laptops to these sessions although there are computers in situ.
+* If on a laptop, please [install MATLAB](https://www.imperial.ac.uk/admin-services/ict/self-service/computers-printing/devices-and-software/get-software/get-software-for-students/matlab/).
+
 
 ## Part 1. Call-and-response Matlab, basic arithmetic, simple scripts
 
