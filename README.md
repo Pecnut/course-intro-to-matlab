@@ -410,6 +410,9 @@ Try:
 * Save them to a file
 * Plot them
 
+# Feedback form
+If you're taking this course through the Graduate School, please fill out [the feedback form](http://bit.ly/computingdatascience1920).
+
 # Extra stuff
 
 ### 14. Eigenvalues and eigenvectors
