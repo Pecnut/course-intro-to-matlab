@@ -7,6 +7,15 @@ Introduction to Matlab course for the CM Hub at Imperial College
 * **Part 2:** 2D plots, functions, Collatz conjecture, if, for, while
 * **Part 3:** Data analysis, linear algebra, 3D plots
 
+## The Graduate School logo
+<img src="/readme-images/grad-school-logo.png">
+
+## On completion of this workshop you will be able to:
+* use Matlab to run scripts,
+* apply fundamental components of the Matlab language including variables, loops, conditionals and functions,
+* create programs designed to solve simple problems,
+* interpret common errors and use these to help debug a program.
+
 ## Prerequisites
 * No programming experience is required
 * Students are welcome to bring their own fully charged laptops to these sessions although there are computers in situ.
