@@ -230,7 +230,7 @@ Join in:
 * `plot(x,y1,'r-')`
 * `hold on`
 * `plot(x,y2,'k--')`
-* `legend('exp(x)','exp(2x)')`
+* `legend('exp(x)','exp(0.9x)')`
 
 Try:
 
