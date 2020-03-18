@@ -244,15 +244,13 @@ Now we move from simple call-and-response to writing whole programs
 
 Join in:
 
-* Create a new file `collatz.m` and inside it write:
+* Create a new file `collatz_function.m` and inside it write:
 ```
-function y = collatz(n)
-  y = 3n+1;
+function y = collatz_function(n)
+  y = 3*n+1;
 end
 ```
-* Why won't this work?
-* Fix the file: `y = 3*n+1;`
-* Save and run `collatz(5)` from the command line
+* Save and run `collatz_function(5)` from the command line
 
 Try:
 
@@ -271,7 +269,7 @@ Join in:
 
 Join in:
 
-* Create a function `function y = signfunction(x)` so that the core functionality reads:
+* Create a function `function y = sign_function(x)` so that the core functionality reads:
 ```
 if x > 0
   y = 1;
@@ -285,7 +283,7 @@ end
 
 Try:
 
-* Change `collatz(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
+* Change `collatz_function(n)` so that if *n* is even, it returns *n*/2, otherwise it returns 3*n*+1.
 
 ### 4. For and while loops
 
@@ -320,9 +318,16 @@ end
 
 Try:
 
-* The Collatz conjecture: adapt `collatz(n)` to take a number `n`, and while `n` does not equal 1, run the algorithm already described in `collatz.m`.
+* **The Collatz conjecture:**
+  * The [Collatz conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture) is a famous mathematical conjecture about a sequence which starts with a positive integer `n`. The next term in the sequence is given by `collatz_function(n)`. The conjecture says that this sequence will always reach the number 1 (where it ends).
+  * For example, the sequence for `n=5` is 5, 16, 8, 4, 2, 1.
+  * Your job is to create a new function, `collatz_conjecture(n)`, which takes a starting number `n` and displays the terms in the sequence.
+  * Take a moment to think about the logic you need!
+  * Suggested method: Use a `while` loop inside the function `collatz_conjecture(n)`. While `n` does not equal 1, run `collatz_function(n)` to get the next term in the sequence.
+  * Hint 1: You have to let the output of `collatz_function(n)` become the input of the function the next time round.
+  * Hint 2: You have to change the value of `n` within your while loop otherwise `n` will never equal 1.
 
-* Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
+* For the keen: Write a script, `collatz_trials.m` which loops through the numbers 1 to 10, printing out the Collatz path every time.
 
 ## Part 3. Data analysis, linear algebra
 
