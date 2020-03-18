@@ -21,6 +21,9 @@ Introduction to Matlab course for the CM Hub at Imperial College
 * Students are welcome to bring their own fully charged laptops to these sessions although there are computers in situ.
 * If on a laptop, please [install MATLAB](https://www.imperial.ac.uk/admin-services/ict/self-service/computers-printing/devices-and-software/get-software/get-software-for-students/matlab/).
 
+## YouTube videos for distance learning
+Timestamps are in the descriptions and correspond to the numbering in this document.
+* Part 1: https://www.youtube.com/watch?v=fsRui3gaOuc
 
 ## Part 1. Call-and-response Matlab, basic arithmetic, simple scripts
 
