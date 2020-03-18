@@ -203,8 +203,8 @@ Join in, putting this in a script, `first_plot.m`:
 
 Try:
 
-* `plot` sin(x) for x between 0 and 2π
-* `plot` a circle (hint: think parametric)
+* `plot` sin(*x*) for *x* between 0 and 2π
+* `plot` a circle: recall *x* = cos(*θ*), *y* = sin(*θ*) for *θ* between 0 and 2π to make a circle with radius 1.
 
 Join in:
 
