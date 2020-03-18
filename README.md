@@ -324,6 +324,7 @@ Try:
   * Your job is to create a new function, `collatz_conjecture(n)`, which takes a starting number `n` and displays the terms in the sequence.
   * Take a moment to think about the logic you need!
   * Suggested method: Use a `while` loop inside the function `collatz_conjecture(n)`. While `n` does not equal 1, run `collatz_function(n)` to get the next term in the sequence.
+  * "Not equal to" is `~=` in Matlab.
   * Hint 1: You have to let the output of `collatz_function(n)` become the input of the function the next time round.
   * Hint 2: You have to change the value of `n` within your while loop otherwise `n` will never equal 1.
 
