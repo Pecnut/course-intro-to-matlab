@@ -360,53 +360,11 @@ Join in:
 * `csvwrite('exchange_rates_pounds.csv',data_pounds)`
 * Look at it in Excel
 
-
-### 2. Linear algebra: Matrix arithmetic
+### 2. Linear algebra: Inversion of matrices (and when this is a bad idea)
 
 Join in:
 
 * `A = [1 0 5; 2 1 6; 3 4 0]`
-* `A.^2`
-* `A^2`
-
-Try:
-
-* Create a 2x3 matrix, call it `B`
-* Create a 3x4 matrix, call it `C`
-* Try calculating `B*C` and `C*B`
-* Multiply `B` by the transpose of `B`
-* Make one of the elements of `B` imaginary (`i`)
-* Calculate `B'`. What does the apostrophe *actually* do?
-
-### 3. Size
-
-Size gives rows × columns
-
-* `size(A)`
-* `size(B)`
-* `x = [1:10]`
-* `size(x)` ... note it's 1×10 (a row vector), not 10×1 (a column vectors).
-
-Vectors by default are row vectors in Matlab.
-
-### 4. Linear algebra: More matrix arithmetic
-
-Join in:
-
-* `A`
-* Let's multiply `A` by (3 1 4)<sup>T</sup>
-* `x = [3 1 4]'` (note apostrophe) or `x = [3; 1; 4]` (note semicolons)
-* `A*x`
-
-Try:
-
-* Let `x = [3 1 4]` (without the apostrophe). Will calculating `A*x` work? Try it.
-* Create the 3×3 identity matrix `I = eye(3)`. Multiply *I* by *x*.
-
-### 5. Linear algebra: Inversion of matrices (and when this is a bad idea)
-
-Join in:
-
 * `A`
 * `inv(A)`
 * Let's solve *Ax* = (–1 0 1)<sup>T</sup>
@@ -424,7 +382,49 @@ If you're taking this course through the Graduate School, please fill out [the f
 
 # Extra stuff
 
-### X1. Eigenvalues and eigenvectors
+### X1. Linear algebra: Matrix arithmetic
+
+Join in:
+
+* `A = [1 0 5; 2 1 6; 3 4 0]`
+* `A.^2`
+* `A^2`
+
+Try:
+
+* Create a 2x3 matrix, call it `B`
+* Create a 3x4 matrix, call it `C`
+* Try calculating `B*C` and `C*B`
+* Multiply `B` by the transpose of `B`
+* Make one of the elements of `B` imaginary (`i`)
+* Calculate `B'`. What does the apostrophe *actually* do?
+
+### X2. Size
+
+Size gives rows × columns
+
+* `size(A)`
+* `size(B)`
+* `x = [1:10]`
+* `size(x)` ... note it's 1×10 (a row vector), not 10×1 (a column vectors).
+
+Vectors by default are row vectors in Matlab.
+
+### X3. Linear algebra: More matrix arithmetic
+
+Join in:
+
+* `A`
+* Let's multiply `A` by (3 1 4)<sup>T</sup>
+* `x = [3 1 4]'` (note apostrophe) or `x = [3; 1; 4]` (note semicolons)
+* `A*x`
+
+Try:
+
+* Let `x = [3 1 4]` (without the apostrophe). Will calculating `A*x` work? Try it.
+* Create the 3×3 identity matrix `I = eye(3)`. Multiply *I* by *x*.
+
+### X4. Eigenvalues and eigenvectors
 
 * `A = [-2 -4 2; -2 1 2; 4 2 5]`
 * `eig(A)`
@@ -433,7 +433,7 @@ Try:
 
 * How to get eigenvectors? (Google or F1)
 
-### X2. Plotting in 3D
+### X5. Plotting in 3D
 
 Join in:
 
@@ -455,7 +455,7 @@ Visualise *f*(*x,y*) = sin(*x*)cos(2*y*) for 0 ≤ *x,y* ≤ 2π:
 * `surf(x,y,f)`
 * `shading interp`
 
-### X3. Strings
+### X6. Strings
 
 Single-quote strings are vectors, with each character an element in the vector
 
@@ -480,7 +480,7 @@ Try:
 * Output the first and last letter of your surname, put together
 * If `conversation = ['hello there', 'general kenobi']` (with single quotes), what is `conversation(2)`?
 
-### X4. Built-in functions to try
+### X7. Built-in functions to try
 Try:
 
 * `sin(x)`, `cos(x)`, `tan(x)`
@@ -488,9 +488,9 @@ Try:
 * `max(x)`, `min(x)`
 * `triu(A)`, `rand(n)`
 
-### [X5. Curve Fitting](./curve_fitting.md)
+### [X8. Curve Fitting](./curve_fitting.md)
 
-### [X6. Numerical Root Finding](./root_finding.md)
+### [X9. Numerical Root Finding](./root_finding.md)
 
 
 # Extra challenges 
