@@ -418,22 +418,12 @@ Try:
 * Solve the system of equations *x*+*y*=2, -*x*+3*y*=3.
 * Let `A = [1 2 3; 4 5 6; 5 7 9]` and `b = [-1; 0; 1]`. Solve *Ax=b*. What is the determinant of *A*? (Google!)
 
-### End of day challenge
-
-* Create a new function `fib.m`. Let this function take a number `n` and output the `n`th Fibonacci number. Recall the algorithm:
-  - F(1) = 1
-  - F(2) = 1
-  - F(i) = F(i-2) + F(i-1)
-* Create a vector of the first 20 Fibonacci numbers
-* Save them to a file
-* Plot them
-
 # Feedback form
 If you're taking this course through the Graduate School, please fill out [the feedback form](http://bit.ly/computingdatascience1920).
 
 # Extra stuff
 
-### 14. Eigenvalues and eigenvectors
+### X1. Eigenvalues and eigenvectors
 
 * `A = [-2 -4 2; -2 1 2; 4 2 5]`
 * `eig(A)`
@@ -442,9 +432,7 @@ Try:
 
 * How to get eigenvectors? (Google or F1)
 
-
-
-### 16. Plotting in 3D
+### X2. Plotting in 3D
 
 Join in:
 
@@ -466,34 +454,7 @@ Visualise *f*(*x,y*) = sin(*x*)cos(2*y*) for 0 ≤ *x,y* ≤ 2π:
 * `surf(x,y,f)`
 * `shading interp`
 
-### Challenge for the end of the day
-
-* Create a 10×10 matrix of random numbers (hint: use `rand`) and call it `A`
-* Find the eigenvalues of *A*
-* Show that the sum of the eigenvalues of *A* = the trace of *A*
-* Plot the eigenvalues on an Argand diagram, using a circular marker at each eigenvalue
-* Now add a row and column of zeros to *A*, to form *B*, which is therefore an 11×11 matrix. (Think about how you might want to do this!)
-* Now plot the eigenvalues of *B* on the same graph as the eigenvalues of *A*, in another colour.
-* What can you say about the eigenvalues of *B* compared to the eigenvalues of *A*?
-
-### Built-in functions to try
-
-Try:
-
-* `sin(x)`, `cos(x)`, `tan(x)`
-* `floor(x)`, `ceil(x)`
-* `max(x)`, `min(x)`
-* `triu(A)`, `rand(n)`
-
-### Challenge
-* Plot the graphs of sin(*ax*), sin(*bx*) and sin(*cx*) for *x* from –π to π, with these plots in different colours. Include a legend, a title and a label for the *x*-axis.
-
-### Challenge
-
-* Plot the function `sin(x)` and `cos(x)` from x = 0 to 2π on the same graph, giving them labels.
-
-
-### Strings
+### X3. Strings
 
 Single-quote strings are vectors, with each character an element in the vector
 
@@ -518,6 +479,38 @@ Try:
 * Output the first and last letter of your surname, put together
 * If `conversation = ['hello there', 'general kenobi']` (with single quotes), what is `conversation(2)`?
 
-### [Curve Fitting](./curve_fitting.md)
+### X4. Built-in functions to try
+Try:
 
-### [Numerical Root Finding](./root_finding.md)
+* `sin(x)`, `cos(x)`, `tan(x)`
+* `floor(x)`, `ceil(x)`
+* `max(x)`, `min(x)`
+* `triu(A)`, `rand(n)`
+
+### [X5. Curve Fitting](./curve_fitting.md)
+
+### [X6. Numerical Root Finding](./root_finding.md)
+
+
+# Extra challenges 
+
+### Challenge 1
+* Plot the graphs of sin(*ax*), sin(*bx*) and sin(*cx*) for *x* from –π to π, with these plots in different colours. Include a legend, a title and a label for the *x*-axis.
+
+### Challenge 2
+* Create a new function `fib.m`. Let this function take a number `n` and output the `n`th Fibonacci number. Recall the algorithm:
+  - F(1) = 1
+  - F(2) = 1
+  - F(i) = F(i-2) + F(i-1)
+* Create a vector of the first 20 Fibonacci numbers
+* Save them to a file
+* Plot them
+
+### Challenge 3
+* Create a 10×10 matrix of random numbers (hint: use `rand`) and call it `A`
+* Find the eigenvalues of *A*
+* Show that the sum of the eigenvalues of *A* = the trace of *A*
+* Plot the eigenvalues on an Argand diagram, using a circular marker at each eigenvalue
+* Now add a row and column of zeros to *A*, to form *B*, which is therefore an 11×11 matrix. (Think about how you might want to do this!)
+* Now plot the eigenvalues of *B* on the same graph as the eigenvalues of *A*, in another colour.
+* What can you say about the eigenvalues of *B* compared to the eigenvalues of *A*?
