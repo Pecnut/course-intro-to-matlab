@@ -26,6 +26,7 @@ Timestamps are in the descriptions and correspond to the numbering in this docum
 * Part 1: https://www.youtube.com/watch?v=fsRui3gaOuc
 * Part 2: https://www.youtube.com/watch?v=HWEWnaV7Xec
 * Part 3: https://www.youtube.com/watch?v=JNvfPRTEbAg
+* Playlist: https://www.youtube.com/playlist?list=PLcRp2oAQBugsErP-wF-tpZUUm8mLg-ME_
 
 ## Part 1. Call-and-response Matlab, basic arithmetic, simple scripts
 
