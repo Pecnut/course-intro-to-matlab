@@ -517,3 +517,6 @@ Try:
 * Now add a row and column of zeros to *A*, to form *B*, which is therefore an 11×11 matrix. (Think about how you might want to do this!)
 * Now plot the eigenvalues of *B* on the same graph as the eigenvalues of *A*, in another colour.
 * What can you say about the eigenvalues of *B* compared to the eigenvalues of *A*?
+
+# Licence
+This work is licensed under a [http://creativecommons.org/licenses/by-nc-sa/4.0/](Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence).
