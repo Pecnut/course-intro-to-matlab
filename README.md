@@ -519,4 +519,4 @@ Try:
 * What can you say about the eigenvalues of *B* compared to the eigenvalues of *A*?
 
 # Licence
-This work is licensed under a [http://creativecommons.org/licenses/by-nc-sa/4.0/](Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence).
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Licence](http://creativecommons.org/licenses/by-nc-sa/4.0/).
